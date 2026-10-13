@@ -1,0 +1,38 @@
+Now, reebog has found yet another obstacle. 
+This time round, the walls are of varying lengths and height at the same time. 
+Need to adapt the hurdle-3 to something that handles the hurdles while also being able to solve hurdles-1 to 3 simulataneously.
+
+Now this was hard. but we made it through. 
+
+--Code--
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+    
+def jump():
+    turn_left()
+    while wall_on_right():
+       move()
+    turn_right()
+    move()
+    turn_right()
+    while front_is_clear():
+        move()
+    turn_left()    
+
+while not at_goal(): 
+    if wall_in_front():
+        jump()
+    else:
+        move()
+
+--Explanation--
+this is what the code does...checks if reebog is at the goal, while its not:
+    Check if there is a wall in front. If its infront, use the jump function.
+    In the jump function, turns left, then wihile there is a wall on the right:
+    It moves foward. if no wall, turn right.
+    Moves down to x=1, turns right. 
+    While front is clear, reebog moves foward and turns left if it encounter a wall, and repeats from line 32.
+    
+            
