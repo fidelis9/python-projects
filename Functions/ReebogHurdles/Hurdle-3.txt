@@ -1,0 +1,36 @@
+Onwards to hurdle 3
+
+drum roll ..........
+
+In this hurdle, the distance between the walls is not symmetrical.
+World info:
+    The functions move() and turn_left().
+    The conditions front_is_clear() or wall_in_front(), at_goal(), and their negation.
+    How to use a while loop and an if statement.
+    Your program should also be valid for worlds Hurdles 1 and Hurdles 2.
+
+For this, we had to modify the jump() function and also introduce an if...else conditional to check for wall.
+Alternatively, i beleive using a negation of front_is_clear where wall_in_front is also works.
+
+
+-- the code--
+
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+    
+def jump():
+    turn_left()
+    move()
+    turn_right()
+    move()
+    turn_right()
+    move()
+    turn_left()
+
+while not at_goal(): 
+    if wall_in_front():
+        jump()
+    else:
+        move()
