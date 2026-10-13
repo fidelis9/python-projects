@@ -1,0 +1,56 @@
+The goal is to moove Reeborg from position a at (1,1) to position b at (13,1)
+
+The total amount of moves taken to move Reeborg is 93 moves, but the code lines are 48.
+
+This is because of the use of functions.
+
+link at : https://reeborg.ca/reeborg.html?lang=en&mode=python&menu=worlds%2Fmenus%2Freeborg_intro_en.json&name=Hurdle%201&url=worlds%2Ftutorial_en%2Fhurdle1.json
+
+Code:
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+    
+def move_square():
+    move()
+    turn_left()
+    move()
+    turn_right()
+    move()
+    turn_right()
+    move()
+    turn_left()
+    move()
+    
+def small_move():
+    move()
+    turn_right()
+    move()
+    turn_right()
+    move()
+    turn_left()
+    move()
+
+def final_move():
+    move()
+    turn_right()
+    move()
+    turn_right()
+    move()
+    turn_left()
+
+def repeat_moves():
+    turn_left()
+    small_move()
+    turn_left()
+    small_move()
+    turn_left()
+    small_move()
+    turn_left()
+    small_move()
+    turn_left()
+
+move_square()
+repeat_moves()
+final_move()
