@@ -1,0 +1,25 @@
+Now we have to move Reebog through the same process but now, with a twist 
+
+The finish flag, may appear anywhere.....randomly. So how do we do this?
+
+We work with a given function at_goal() and the while loop.
+
+So basically:
+
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+    
+def jump():
+    move()
+    turn_left()
+    move()
+    turn_right()
+    move()
+    turn_right()
+    move()
+    turn_left()
+
+while at_goal() != True:
+    jump()
