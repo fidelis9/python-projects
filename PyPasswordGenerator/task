@@ -1,0 +1,8 @@
+Create a password generator that allows user to select how many characters that will be in the password.
+User selects number of letters, symbols and numbers that will be in the password. 
+
+# Easy Version
+Generate the password in sequence. Letters, then symbols, then numbers
+
+# Hard version
+Generate the password to have random sequence.
